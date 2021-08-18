@@ -14,7 +14,7 @@ cv2.waitKey(0)
 
 # 初始化我们的画布
 canvas = np.zeros((300, 300, 3), dtype="uint8")
- 
+   
 # 画一条从左上角到右下角的绿线
 green = (0, 255, 0)
 cv2.line(canvas, (0, 0), (300, 300), green)
