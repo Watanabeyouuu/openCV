@@ -11,7 +11,7 @@ canvas = np.zeros((200, 300, 3), dtype="uint8")
 cv2.rectangle(canvas, (10, 10), (60, 60), (255, 0, 0), -1)
 cv2.imshow("Canvas", canvas)
 cv2.waitKey(0)
-  
+
 # 初始化我们的画布
 canvas = np.zeros((300, 300, 3), dtype="uint8")
 
