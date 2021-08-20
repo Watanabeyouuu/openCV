@@ -2,6 +2,7 @@ import numpy as np
 import argparse
 import imutils
 import cv2
+from matplotlib import pyplot as plt
 
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", required=True, help="Path to the image")
@@ -25,6 +26,9 @@ rotated = cv2.warpAffine(image, M, (w, h))
 a = rotated[34, 67]
 print(a)
 cv2.imshow("Rotated by 45 Degrees", rotated)
+plt.figure('rotated')
+plt.imshow(imutils.opencv2matplotlib(rotated))
+plt.show()
 
 M = cv2.getRotationMatrix2D((cX, cY), -90, 1.0)
 rotated = cv2.warpAffine(image, M, (w, h))
