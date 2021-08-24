@@ -7,9 +7,9 @@ import imutils
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", required=True, help="Path to the image")
 ap.add_argument("-l", "--lower-angle", type=float, default=175.0,
-	help="Lower orientation angle")
+                help="Lower orientation angle")
 ap.add_argument("-u", "--upper-angle", type=float, default=180.0,
-	help="Upper orientation angle")
+                help="Upper orientation angle")
 args = vars(ap.parse_args())
 
 # 加载图像，转换为灰度图像
