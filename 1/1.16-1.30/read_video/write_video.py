@@ -18,7 +18,7 @@ out = cv2.VideoWriter('outpy.avi', cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'), 1
 while (True):
     ret, frame = cap.read()
 
-    if ret == True:
+    if ret:  # if ret == True
         # 将图片写入 'output.avi'
         out.write(frame)
 
