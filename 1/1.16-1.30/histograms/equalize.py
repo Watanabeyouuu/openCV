@@ -1,9 +1,7 @@
-
 import argparse
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
-
 
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", required=True, help="Path to the image")
@@ -23,14 +21,14 @@ cv2.waitKey(0)
 hist2 = cv2.calcHist([image], [0], None, [256], [0, 256])
 
 hist = cv2.calcHist([eq], [0], None, [256], [0, 256])
-a = eq[272,146]
+a = eq[272, 146]
 print(a)
 acc = np.add.accumulate(hist)
 # matplotlib 显示灰度图像的两种方法
 plt.figure()
 plt.axis("off")
 # plt.imshow(cv2.cvtColor(image, cv2.COLOR_GRAY2RGB))
-plt.imshow(eq,cmap='gray')
+plt.imshow(eq, cmap='gray')
 # 绘制histogram
 plt.figure()
 plt.title("Equalized Histogram")
